@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Nutrition Intake Results</h1>
+    {% if results %}
+    <p>
+      Calories intake is {{ results.calories_percent|round(2) }}% of your daily
+      needs.
+    </p>
+    <p>
+      Protein intake is {{ results.protein_percent|round(2) }}% of your daily
+      needs.
+    </p>
+    <p>
+      Carbs intake is {{ results.carbs_percent|round(2) }}% of your daily needs.
+    </p>
+    {% else %}
+    <p>No results to display.</p>
+    {% endif %}
+    <a href="/">Try again</a>
+  </body>
+</html>
